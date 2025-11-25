@@ -18,11 +18,11 @@
       theme: {
         extend: {
           colors: {
-            primary: '#FFFFFF',
-            secondary: '#F5F5F5',
+            primary: '#000000',
+            secondary: '#111111',
             accent: '#e31e24',
-            textPrimary: '#000000',
-            textSecondary: '#666666',
+            textPrimary: '#FFFFFF',
+            textSecondary: '#9CA3AF',
             cta: '#e31e24',
           },
           fontFamily: {
@@ -30,7 +30,7 @@
             heading: ['Rajdhani', 'sans-serif'],
           },
           backgroundImage: {
-            'grid-pattern': "linear-gradient(to right, #F5F5F5 1px, transparent 1px), linear-gradient(to bottom, #F5F5F5 1px, transparent 1px)",
+            'grid-pattern': "linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)",
           },
           animation: {
             'fade-in': 'fadeIn 0.5s ease-out forwards',
@@ -48,8 +48,8 @@
   </script>
   <style>
     body {
-      background-color: #FFFFFF;
-      color: #000000;
+      background-color: #000000;
+      color: #FFFFFF;
     }
 
     /* Custom Scrollbar */
@@ -58,7 +58,7 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: #F5F5F5;
+      background: #111111;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -71,11 +71,11 @@
     }
 
     .glass-panel {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(227, 30, 36, 0.2);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
     .no-scrollbar::-webkit-scrollbar {
