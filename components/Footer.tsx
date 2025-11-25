@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary border-t border-white/10 pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-[#111111] border-t border-white/10 pt-16 pb-8 relative overflow-hidden">
       {/* Background accent glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
 
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} Raj Glass Machine (India) LLP. All rights reserved.
           </p>
           <p className="text-xs text-textSecondary/50">
-            Designed for Industrial Precision.
+            Developed By - <a href="https://digitaledgetech.in/" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-accent transition-colors">Digital Edge Technologies</a>
           </p>
         </div>
       </div>

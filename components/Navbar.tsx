@@ -15,11 +15,13 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-accent rounded flex items-center justify-center text-primary font-bold text-xl">
-              R
-            </div>
+            <img className="w-auto h-16" src="https://lh3.googleusercontent.com/p/AF1QipN8KKTQzMx-bkx2FsS6E-FN-rZKy8ssk7kdG2Vj=s680-w680-h510-rw" alt="" srcset="" />
+
+            {/*<div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-accent rounded flex items-center justify-center text-white font-bold text-xl shadow-md">
+             R 
+            </div>*/}
             <div className="flex flex-col">
-              <span className="font-heading font-bold text-2xl tracking-wider text-white leading-none">
+              <span className="font-heading font-bold text-2xl tracking-wider text-textPrimary leading-none">
                 RAJ GLASS
               </span>
               <span className="text-[10px] tracking-[0.2em] text-accent uppercase">
@@ -37,11 +39,10 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 uppercase tracking-wide ${
-                      isActive
-                        ? 'text-accent bg-white/5 border border-accent/20 shadow-[0_0_15px_rgba(100,255,218,0.1)]'
-                        : 'text-textSecondary hover:text-white hover:bg-white/5'
-                    }`}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 uppercase tracking-wide ${isActive
+                      ? 'text-accent bg-accent/5 border border-accent/20 font-bold'
+                      : 'text-textSecondary hover:text-accent hover:bg-gray-100'
+                      }`}
                   >
                     {item.label}
                   </Link>
@@ -75,21 +76,21 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden glass-panel border-t border-white/10">
+        <div className="md:hidden bg-white border-t border-gray-200 shadow-xl absolute w-full left-0 top-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-textSecondary hover:text-accent hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium"
               >
                 {item.label}
               </Link>
             ))}
             <a
-               href="tel:+919820012345"
-               className="text-cta block px-3 py-2 rounded-md text-base font-bold"
+              href="tel:+919820012345"
+              className="text-cta block px-3 py-2 rounded-md text-base font-bold bg-cta/5"
             >
               Call Support
             </a>

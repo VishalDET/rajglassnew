@@ -90,7 +90,7 @@ const Products: React.FC = () => {
           </div>
 
           {/* Filter Bar */}
-          <div className="sticky top-20 z-40 bg-primary/95 backdrop-blur border-y border-white/10 mb-12">
+          <div className="sticky top-20 z-40 bg-primary/95 backdrop-blur border-y border-gray-200 mb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
               <div className="flex items-center overflow-x-auto no-scrollbar gap-4">
                 <div className="flex items-center text-textSecondary mr-4 shrink-0">
@@ -120,7 +120,7 @@ const Products: React.FC = () => {
                 <div
                   key={machine.id}
                   onClick={() => openMachine(machine)}
-                  className="group cursor-pointer glass-panel rounded-xl overflow-hidden hover:border-accent/50 transition-all hover:-translate-y-1 duration-300 border border-white/5"
+                  className="group cursor-pointer glass-panel rounded-xl overflow-hidden hover:border-accent/50 transition-all hover:-translate-y-1 duration-300 border border-gray-200"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <img
@@ -144,11 +144,11 @@ const Products: React.FC = () => {
                   </div>
                   <div className="p-6">
                     <div className="grid grid-cols-2 gap-4 mb-6 pt-2">
-                      <div className="border-l-2 border-white/10 pl-3">
+                      <div className="border-l-2 border-gray-200 pl-3">
                         <p className="text-[10px] text-textSecondary uppercase tracking-wider">Thickness</p>
                         <p className="text-sm font-bold text-textPrimary font-mono">{machine.specs.thickness}</p>
                       </div>
-                      <div className="border-l-2 border-white/10 pl-3">
+                      <div className="border-l-2 border-gray-200 pl-3">
                         <p className="text-[10px] text-textSecondary uppercase tracking-wider">Power</p>
                         <p className="text-sm font-bold text-textPrimary font-mono">{machine.specs.power}</p>
                       </div>
@@ -168,7 +168,7 @@ const Products: React.FC = () => {
               <div className="min-h-screen flex flex-col">
 
                 {/* Modal Header */}
-                <div className="sticky top-0 z-50 bg-primary/95 border-b border-white/10 backdrop-blur-lg px-4 py-4 flex justify-between items-center">
+                <div className="sticky top-0 z-50 bg-primary/95 border-b border-gray-200 backdrop-blur-lg px-4 py-4 flex justify-between items-center">
                   <div className="flex items-center gap-4">
                     <button onClick={closeMachine} className="text-textPrimary hover:text-accent flex items-center gap-2 text-sm font-bold uppercase">
                       <X size={20} /> Close
@@ -187,7 +187,7 @@ const Products: React.FC = () => {
                     {/* Left Column: Visuals */}
                     <div className="lg:w-2/3 space-y-8">
                       {/* Main Gallery */}
-                      <div className="relative aspect-video bg-black rounded-lg overflow-hidden border border-white/10">
+                      <div className="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-200">
                         <img src={activeImage} alt={selectedMachine.name} className="w-full h-full object-contain" />
                       </div>
 
@@ -221,7 +221,7 @@ const Products: React.FC = () => {
                         </p>
 
                         <h3 className="font-heading font-bold text-2xl text-textPrimary mb-4">Technical Specifications</h3>
-                        <div className="bg-secondary/50 rounded-lg overflow-hidden border border-white/10">
+                        <div className="bg-secondary/50 rounded-lg overflow-hidden border border-gray-200">
                           <table className="w-full text-left text-sm">
                             <tbody className="divide-y divide-white/5">
                               {Object.entries(selectedMachine.specs).map(([key, value]) => (
@@ -247,7 +247,7 @@ const Products: React.FC = () => {
                       <div className="sticky top-24 space-y-6">
 
                         {/* Key Benefits */}
-                        <div className="bg-secondary/30 p-6 rounded-lg border border-white/10">
+                        <div className="bg-secondary/30 p-6 rounded-lg border border-gray-200">
                           <h4 className="font-bold text-textPrimary mb-4 flex items-center gap-2">
                             <Check className="text-accent" size={16} /> Why this machine?
                           </h4>
@@ -284,7 +284,7 @@ const Products: React.FC = () => {
                             </button>
                           </form>
 
-                          <div className="mt-4 pt-4 border-t border-white/10 text-center">
+                          <div className="mt-4 pt-4 border-t border-gray-200 text-center">
                             <button className="text-textPrimary hover:text-accent text-sm flex items-center justify-center gap-2 w-full border border-black/20 py-2 rounded">
                               <Download size={16} /> Download Brochure
                             </button>
